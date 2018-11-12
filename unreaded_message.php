@@ -81,7 +81,7 @@ function listMessages($service, $userId)
     $pageToken = NULL;
     $messages  = array();
     $opt_param = array();
-    $q         = 'is:unread';
+    $q         = 'from:Sakthivel Govindan <sakthivelgovindan@designqubearchitects.com> is:unread';
     $response  = array();
     do {
         try {
@@ -160,7 +160,7 @@ function getMessage($service, $userId, $messageId)
         $response['receiver'] = $receiver;
         $response['data']     = $decodedMessage;
 
-        return $message;
+        return $response;
     }
     catch (Exception $e) {
         print 'An error occurred: ' . $e->getMessage();
